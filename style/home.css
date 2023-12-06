@@ -1,0 +1,126 @@
+.home--wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* padding: 25% 0 40px; */
+	min-height: calc(100vh - 60px);
+}
+
+.home--image--wrapper {
+	width: clamp(150px, 50%, 200px);
+	aspect-ratio: 1 / 1;
+	border-radius: 500px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+
+.home--image--wrapper img {
+	width: auto;
+	height: 100%;
+	object-fit: contain;
+}
+
+.home--content--wrapper {
+	width: clamp(200px, 80%, 400px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.home--content--wrapper h2 {
+	font-size: 1.6rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.home--content--wrapper p {
+	font-size: 1.2rem;
+	color: var(--color--text--dark);
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.home--social--wrapper {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.home--social {
+	width: 32px;
+	height: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.home--social img {
+	width: auto;
+	height: 100%;
+	object-fit: contain;
+}
+
+@media (min-width: 769px) {
+	.home--image--wrapper {
+		width: 300px;
+		margin-bottom: 150px;
+	}
+
+	.home--content--wrapper {
+		width: clamp(200px, 80%, 600px);
+	}
+
+	.home--content--wrapper h2 {
+		font-size: 2.8rem;
+		margin-bottom: 40px;
+	}
+
+	.home--content--wrapper p {
+		font-size: 2rem;
+		margin-bottom: 80px;
+	}
+
+	.home--social--wrapper {
+		gap: 40px;
+	}
+
+	.home--social {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+@media (min-width: 1280px) {
+	.home--wrapper {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 120px;
+		padding: 60px 40px 40px;
+	}
+
+	.home--image--wrapper {
+		margin-bottom: 0;
+	}
+
+	.home--content--wrapper {
+		align-items: flex-start;
+	}
+
+	.home--content--wrapper h2 {
+		font-size: 1.6rem;
+		margin-bottom: 20px;
+	}
+
+	.home--content--wrapper p {
+		font-size: 1rem;
+		margin-bottom: 32px;
+		line-height: 1.5;
+		text-align: start;
+	}
+}

@@ -6,30 +6,30 @@
 		<title>Portfolio Rémy Pierre</title>
 
 		<link rel="stylesheet" href="style/main.css" />
+		<link rel="stylesheet" href="style/header.css" />
+		<link rel="stylesheet" href="style/home.css" />
+		<link rel="stylesheet" href="style/about.css" />
+		<link rel="stylesheet" href="style/services.css" />
+		<link rel="stylesheet" href="style/gallery.css" />
+		<link rel="stylesheet" href="style/contact.css" />
 	</head>
 
 	<body>
-		<header>
+		<header class="header">
 			<div class="header--wrapper container">
 				<h1 class="header--title">Portfolio</h1>
 
-				<div class="header--nav--wrapper" id="menuMobileContainer">
-					<nav class="header--nav">
-						<div class="nav--link--wrapper">
-							<a class="nav--link active" id="navLinkHome">Accueil</a>
-						</div>
-						<div class="nav--link--wrapper">
-							<a class="nav--link" id="navLinkAbout">&Agrave; propos</a>
-						</div>
-						<div class="nav--link--wrapper">
-							<a class="nav--link" id="navLinkServices">Services</a>
-						</div>
-						<div class="nav--link--wrapper">
-							<a class="nav--link" id="navLinkGallery">Galerie</a>
-						</div>
-						<div class="nav--link--wrapper">
-							<a class="nav--link" id="navLinkContact">Contact</a>
-						</div>
+				<div class="header--menu" id="menu">
+					<nav class="menu--nav">
+						<a class="menu--nav--link active" id="navLinkHome">Accueil</a>
+						<div class="menu--separator"></div>
+						<a class="menu--nav--link" id="navLinkAbout">&Agrave; propos</a>
+						<div class="menu--separator"></div>
+						<a class="menu--nav--link" id="navLinkServices">Services</a>
+						<div class="menu--separator"></div>
+						<a class="menu--nav--link" id="navLinkProjects">Projets</a>
+						<div class="menu--separator"></div>
+						<a class="menu--nav--link" id="navLinkContact">Contact</a>
 					</nav>
 				</div>
 
@@ -55,10 +55,12 @@
 						</p>
 
 						<div class="home--social--wrapper">
-							<a class="home--social">
+							<a
+								class="home--social"
+								href="www.linkedin.com/in/rémy-pierre-537b49266">
 								<img src="public/images/linkedin_icon.png" />
 							</a>
-							<a class="home--social">
+							<a class="home--social" href="https://github.com/Remy-PIERRE">
 								<img src="public/images/github_icon.png" />
 							</a>
 						</div>
@@ -69,7 +71,7 @@
 			<section
 				class="about--container section--container hidden"
 				id="sectionAbout">
-				<div class="about--wrapper section--wrapper">
+				<div class="about--wrapper dark section--wrapper">
 					<h2 class="section--title">About</h2>
 
 					<div class="about--portrait--wrapper">
@@ -85,14 +87,17 @@
 
 					<div class="about--description--paraph">
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-							libero nobis nesciunt quis possimus, nihil modi facilis corrupti
-							voluptatem dignissimos vitae ex saepe sequi a voluptas facere
-							fugiat placeat labore!
+							Bonjour, je m'appelle Rémy et je suis développeur web. De la
+							rédaction du cahier des charges à la mise en ligne, en utilisant
+							WordPress ou en construisant de A à Z selon votre idée, je
+							donnerais vie à votre projet web.
 						</p>
+
 						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-							assumenda numquam. Magnam cupiditate quibusdam ullam?
+							Ouvrier reconvertit dans les métier du numérique en 2022, j'ai
+							depuis eut l'oportunité de travailler sur plusieurs projets que
+							vous pouvez découvrir dans la section
+							<span id="linkProjects">projets</span>.
 						</p>
 					</div>
 
@@ -103,7 +108,7 @@
 					</div>
 				</div>
 
-				<div class="about--wrapper white section--wrapper">
+				<div class="about--wrapper light section--wrapper">
 					<div class="about--skills">
 						<h3 class="about--skills--title">Compétences Web</h3>
 
@@ -186,20 +191,39 @@
 
 					<div class="services--cards--wrapper">
 						<div class="card--wrapper">
-							<h3>Lorem, ipsum dolor.</h3>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+							<img src="public/images/sensible.png" />
+							<h3>Multi-plateforme</h3>
+							<p class="invisible">mobile, tablette et pc</p>
 						</div>
 						<div class="card--wrapper">
-							<h3>Lorem, ipsum dolor.</h3>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+							<img src="public/images/cms.png" />
+							<h3>CMS</h3>
+							<p class="invisible">création de site avec WordPress</p>
 						</div>
 						<div class="card--wrapper">
-							<h3>Lorem, ipsum dolor.</h3>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+							<img src="public/images/customer-experience.png" />
+							<h3>Sur mesure</h3>
+							<p class="invisible">
+								création et intégration des fonctionnalités qui correspondent à
+								vos besoins
+							</p>
 						</div>
 						<div class="card--wrapper">
-							<h3>Lorem, ipsum dolor.</h3>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+							<img src="public/images/entretien.png" />
+							<h3>Maintenance</h3>
+							<p class="invisible">mise à jour ou correctiondes bugs</p>
+						</div>
+						<div class="card--wrapper">
+							<img src="public/images/seo.png" />
+							<h3>Référencement</h3>
+							<p class="invisible">utilisation des outils SEO</p>
+						</div>
+						<div class="card--wrapper">
+							<img src="public/images/groupe-dutilisateurs.png" />
+							<h3>Accompagnement</h3>
+							<p class="invisible">
+								documentation et formation pour utiliser vos application
+							</p>
 						</div>
 					</div>
 				</div>
@@ -207,7 +231,7 @@
 
 			<section
 				class="gallery--container section--container hidden"
-				id="sectionGallery">
+				id="sectionProjects">
 				<div class="gallery--wrapper section--wrapper">
 					<h2 class="section--title">Galerie</h2>
 
@@ -235,10 +259,8 @@
 							</a>
 						</div>
 
-						<a>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-							sit.
-						</a>
+						<p>Refonte du site du centre de formation Eni Service.</p>
+						<a> https://www.eni-service.fr/ </a>
 
 						<div class="separator"></div>
 
@@ -265,10 +287,68 @@
 							</a>
 						</div>
 
-						<a
-							>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-							sit.</a
-						>
+						<p>
+							Mise à jour et passage vers le mobile pour lesite du salon de
+							massage Ruan Thaï.
+						</p>
+						<a> https://github.com/Remy-PIERRE/Ruan-Thai </a>
+
+						<div class="separator"></div>
+
+						<div class="gallery--row">
+							<a class="gallery--figure">
+								<img src="https://dummyimage.com/100x200" />
+								<div>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</div>
+							</a>
+
+							<a class="gallery--figure">
+								<img src="https://dummyimage.com/100x100" />
+								<div>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</div>
+							</a>
+
+							<a class="gallery--figure">
+								<img src="https://dummyimage.com/100x100" />
+								<div>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</div>
+							</a>
+						</div>
+
+						<p>Logiciel de génération de devis et factures Amaya.</p>
+
+						<div class="separator"></div>
+
+						<div class="gallery--row">
+							<a class="gallery--figure">
+								<img src="https://dummyimage.com/100x200" />
+								<div>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</div>
+							</a>
+
+							<a class="gallery--figure">
+								<img src="https://dummyimage.com/100x100" />
+								<div>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</div>
+							</a>
+
+							<a class="gallery--figure">
+								<img src="https://dummyimage.com/100x100" />
+								<div>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</div>
+							</a>
+						</div>
+
+						<p>
+							Mise à jour et ajouts de fonctionnalités et localisation du site
+							de l'entreprise BTP KMTP.
+						</p>
 					</div>
 				</div>
 			</section>

@@ -1,0 +1,145 @@
+.about--wrapper.dark {
+	background: var(--color-bg-dark);
+}
+
+.about--wrapper.light {
+	background: #fff;
+	padding-top: 60px;
+}
+
+.about--portrait--wrapper {
+	width: 100%;
+	max-height: 300px;
+	margin-bottom: 32px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.about--portrait--wrapper img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.about--description--title {
+	display: flex;
+	flex-direction: column;
+}
+
+.about--description--title h3 {
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+.about--description--title p {
+	font-size: 1rem;
+	color: var(--color--text--dark);
+}
+
+.about--description--paraph {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.about--description--paraph p {
+	font-size: 1rem;
+	color: var(--color--text--dark);
+	line-height: 1.4;
+}
+
+.about--description--paraph span {
+	color: var(--color--text--black);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.about--skills h3 {
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+
+.about--wrapper--50 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.about--cv--wrapper button {
+	height: 48px;
+	width: fit-content;
+	padding: 0 20px;
+	border: 2px inset rgba(0, 0, 0, 0.8);
+	border-radius: 6px;
+	background: #000;
+	color: #fff;
+	font-size: 1.2rem;
+	cursor: pointer;
+	margin-bottom: 60px;
+}
+
+.about--skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.about--skills--title {
+	font-size: 1.4rem;
+	font-weight: bold;
+	width: 100%;
+}
+
+.skill--wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 20px;
+}
+
+.skill--text {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.skill--text p {
+	font-size: 1rem;
+}
+
+.skill--progress {
+	height: 6px;
+	width: 100%;
+	/* border: 1px solid #000; */
+	border-radius: 6px;
+}
+
+.progress--40 {
+	background: linear-gradient(to right, #000 40%, rgba(0, 0, 0, 0.05) 40%);
+}
+.progress--50 {
+	background: linear-gradient(to right, #000 50%, rgba(0, 0, 0, 0.05) 50%);
+}
+.progress--60 {
+	background: linear-gradient(to right, #000 60%, rgba(0, 0, 0, 0.05) 60%);
+}
+.progress--75 {
+	background: linear-gradient(to right, #000 75%, rgba(0, 0, 0, 0.05) 75%);
+}
+.progress--80 {
+	background: linear-gradient(to right, #000 80%, rgba(0, 0, 0, 0.05) 80%);
+}
+.progress--90 {
+	background: linear-gradient(to right, #000 90%, rgba(0, 0, 0, 0.05) 90%);
+}
+
+@media (min-width: 796px) {
+	.about--wrapper--50 {
+		width: 45%;
+	}
+}

@@ -4,16 +4,25 @@ const initPage = () => {
 	const menuMobileButton = document.querySelector("#menuMobileButton");
 	menuMobileButton.addEventListener("click", handleMenuMobileOpening);
 
-	const links = document.querySelectorAll(".nav--link");
+	const links = document.querySelectorAll(".menu--nav--link");
 	links.forEach((link) => link.addEventListener("click", handleNavLinkClick));
 
 	document
 		.querySelector("#navLinkHome")
 		.dispatchEvent(new CustomEvent("click"));
+
+	document.querySelector("#linkProjects").addEventListener("click", () => {
+		document
+			.querySelector("#navLinkProjects")
+			.dispatchEvent(new CustomEvent("click"));
+	});
+
+	const cards = document.querySelectorAll(".card--wrapper");
+	cards.forEach((card) => card.addEventListener("click", handleCardClick));
 };
 
 const handleMenuMobileOpening = () => {
-	const menuMobile = document.querySelector("#menuMobileContainer");
+	const menuMobile = document.querySelector("#menu");
 	menuMobile.classList.toggle("opened");
 
 	const menuMobileButton = document.querySelector("#menuMobileButton");
@@ -22,7 +31,7 @@ const handleMenuMobileOpening = () => {
 
 const handleNavLinkClick = (event) => {
 	const link = event.currentTarget;
-	const links = document.querySelectorAll(".nav--link");
+	const links = document.querySelectorAll(".menu--nav--link");
 	const sections = document.querySelectorAll(".section--container");
 
 	links.forEach((link) => {
@@ -59,24 +68,34 @@ const handleNavLinkClick = (event) => {
 				.classList.toggle("hidden");
 			history.pushState({}, "", "#contact");
 			break;
-		case "navLinkGallery":
+		case "navLinkProjects":
 			[...sections]
-				.find((section) => section.id === "sectionGallery")
+				.find((section) => section.id === "sectionProjects")
 				.classList.toggle("hidden");
-			history.pushState({}, "", "#gallery");
+			history.pushState({}, "", "#projets");
 			break;
 		default:
 			break;
 	}
 
-	const menuMobile = document.querySelector("#menuMobileContainer");
+	const menuMobile = document.querySelector("#menu");
 	if ([...menuMobile.classList].includes("opened"))
 		menuMobile.classList.toggle("opened");
+
+	const menuMobileButton = document.querySelector("#menuMobileButton");
+	if ([...menuMobileButton.classList].includes("change"))
+		menuMobileButton.classList.toggle("change");
+};
+
+const handleCardClick = (event) => {
+	const card = event.currentTarget;
+
+	card.querySelector("p").classList.toggle("invisible");
 };
 
 initPage();
 
 // DEV - select vue //
-document
-	.querySelector("#navLinkServices")
-	.dispatchEvent(new CustomEvent("click"));
+// document
+// 	.querySelector("#navLinkServices")
+// 	.dispatchEvent(new CustomEvent("click"));
